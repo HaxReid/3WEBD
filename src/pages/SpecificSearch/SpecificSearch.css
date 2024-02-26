@@ -1,0 +1,38 @@
+.SpecificSearch{
+    padding: 3rem 0;
+    align-items: center;
+}
+
+.SpecificSearch-content{
+    gap: 4rem;
+}
+.SpecificSearch-title{
+    margin: 1rem 0;
+}
+.SpecificSearch-img img{
+    max-width: 520px;
+}
+.SpecificSearch-text p{
+    margin: 1.8rem 0;
+    opacity: 0.8;
+}
+
+.bg-color {
+    background-color: #949393;
+
+}
+
+.header-content{
+    min-height: 40vh;
+    background: linear-gradient(rgba(28, 15, 204, 0.3), rgba(0, 0, 0, 0.5));
+    flex-direction: column;
+}
+.header-title{
+    font-size: 4.2rem;
+}
+.header-text{
+    margin-top: -1.8rem;
+    margin-bottom: 2.8rem;
+    opacity: 0.8;
+    max-width: 770px;
+}
