@@ -21,9 +21,6 @@ const BookDetails = () => {
         const response = await fetch(`${URL}${id}.json`);
         
         const data = await response.json();
-        console.log("Requete  =>" & fetch(`${URL}${id}.json`));
-        console.log("RRRRRRRRRRRRResponse ptn =>" & response);
-        console.log(data);
 
         if(data){
           const {description, title, covers, subject_places, subject_times, subjects} = data;
