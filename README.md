@@ -20,5 +20,19 @@ Ouvrez [http://localhost:3000] pour l'ouvrir dans votre navigateur.
 La page se rechargera si vous apportez des modifications.\
 Vous verrez également toutes les erreurs de lint dans la console.
 
+### `npm test`
+
+Lance l'application en mode test.
+Dans la console, suivez les fonctionnalités de test :
+
+```bash 
+Watch Usage
+ › Press a to run all tests.
+ › Press f to run only failed tests.
+ › Press q to quit watch mode.
+ › Press p to filter by a filename regex pattern.
+ › Press t to filter by a test name regex pattern.
+ › Press Enter to trigger a test run. 
+ ``` 
 
 
