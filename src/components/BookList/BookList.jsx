@@ -8,20 +8,24 @@ import "./BookList.css";
 const BookList = () => {
     const { books, loading, resultTitle } = useGlobalContext();
     const booksWithCovers = books.map((singleBook) => {
+        const bookId = singleBook.id.replace("/works/", "");
+        const coverURL = singleBook.cover_id ? `https://covers.openlibrary.org/b/id/${singleBook.cover_id}-L.jpg` : coverImg;
+        console.log(`Requête pour obtenir la couverture du livre avec l'ID ${bookId}: ${coverURL}`);
+        
         return {
             ...singleBook,
-            id: singleBook.id.replace("/works/", ""),
-            cover_img: singleBook.cover_id ? `https://covers.openlibrary.org/b/id/${singleBook.cover_id}-L.jpg` : coverImg
+            id: bookId,
+            cover_img: coverURL
         }
     });
 
-    const [scrollDownAmount, setScrollDownAmount] = useState(500); // Définir la quantité de défilement vers le bas en pixels
+    const [scrollDownAmount, setScrollDownAmount] = useState(200); // nbr pixels à defiler 
 
     useEffect(() => {
         if (!loading) {
             const timeout = setTimeout(() => {
-                window.scrollBy({ top: scrollDownAmount, behavior: 'smooth' }); // Faites défiler vers le bas de la page
-            }, 500); // Attendre 0.5 seconde après la fin du chargement
+                window.scrollBy({ top: scrollDownAmount, behavior: 'smooth' }); // défiler vers le bas 
+            }, 500); // Attendre 0.5 seconde
             return () => clearTimeout(timeout);
         }
     }, [loading, scrollDownAmount]);

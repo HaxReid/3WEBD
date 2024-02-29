@@ -23,14 +23,15 @@ const BookDetails = () => {
         const data = await response.json();
 
         if(data){
-          const {description, title, covers, subject_places, subject_times, subjects} = data;
+          const {description, title, covers, subject_places, subject_times, subjects, first_publish_date} = data;
           const newBook = {
             description: description ? description.value : "Pas de description disponible",
             title: title,
             cover_img: covers ? `https://covers.openlibrary.org/b/id/${covers[0]}-L.jpg` : coverImg,
             subject_places: subject_places ? subject_places.join(", ") : "Pas de lieu trouvé",
             subject_times : subject_times ? subject_times.join(", ") : "Pas de periode trouvée",
-            subjects: subjects ? subjects.join(", ") : "Pas de sujet trouvé"
+            subjects: subjects ? subjects.join(", ") : "Pas de sujet trouvé",
+            first_publish_date : first_publish_date ? first_publish_date : "Pas de premiàre publication trouvée",
           };
           setBook(newBook);
         } else {
@@ -77,6 +78,10 @@ const BookDetails = () => {
             <div className='book-details-item'>
               <span className='fw-6'>Sujet: </span>
               <span>{book?.subjects}</span>
+            </div>
+            <div className='book-details-item'>
+              <span className='fw-6'>Date de publication : </span>
+              <span>{book?.first_publish_date}</span>
             </div>
           </div>
         </div>

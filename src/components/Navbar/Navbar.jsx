@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className='navbar' id = "navbar">
       <div className='container navbar-content flex'>
         <div className='brand-and-toggler flex flex-sb'>
-          <Link to = "/" className='navbar-brand flex'>
+          <Link to = "/index" className='navbar-brand flex'>
             <img src = {logoImg} alt = "site logo" />
             <span className='text-uppercase fw-7 fs-24 ls-1'>SUP' BOOK</span>
           </Link>
@@ -26,10 +26,10 @@ const Navbar = () => {
         <div className={toggleMenu ? "navbar-collapse show-navbar-collapse" : "navbar-collapse"}>
           <ul className = "navbar-nav">
             <li className='nav-item'>
-              <Link to = "/" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Accueil</Link>
+              <Link to = "/index" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Accueil</Link>
             </li>
             <li className='nav-item'>
-              <Link to = "SpecificSearch" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Recherche Avancée</Link>
+              <Link to = "/SpecificSearch" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Recherche Avancée</Link>
             </li>
           </ul>
         </div>

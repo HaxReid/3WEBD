@@ -38,7 +38,7 @@
     z-index: 10;
     background-color: var(--black-color);
     height: 100%;
-    width: 280px;
+    width: 80px;
     display: flex;
     padding: 10rem 3rem 0 3rem;
     transform: translatex(100%);

@@ -9,6 +9,7 @@ import Home from './pages/Home/Home';
 import SpecificSearchPage from "./pages/SpecificSearch/SpecificSearch";
 import BookList from "./components/BookList/BookList";
 import BookDetails from "./components/BookDetails/BookDetails";
+import LatestModifiedBooks from './components/BookList/LatestModifiedBooks';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +22,7 @@ root.render(
           <Route path = "*" element = {<h1>Not Found</h1>} />
         </Route>
         <Route path = "SpecificSearch" element = {<SpecificSearchPage />} />
+        <Route path = "index" element = {<LatestModifiedBooks />} />
       </Routes>
     </BrowserRouter>
   </AppProvider>

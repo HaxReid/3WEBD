@@ -1,4 +1,4 @@
-/* Style pour la liste déroulante */
+
 select {
     padding: 8px;
     font-size: 16px;
@@ -6,10 +6,9 @@ select {
     border-radius: 4px;
     background-color: #fff;
     cursor: pointer;
-    outline: none; /* Supprime la bordure bleue lorsqu'elle est sélectionnée */
+    outline: none; 
   }
   
-  /* Style pour les options de la liste déroulante */
   option {
     padding: 8px;
     font-size: 16px;
@@ -17,18 +16,15 @@ select {
     color: #333;
   }
   
-  /* Style pour les options survolées */
   option:hover {
     background-color: #f0f0f0;
   }
   
-  /* Style pour la flèche de la liste déroulante */
   select:after {
-    content: '\25BC'; /* Utilise une flèche vers le bas comme contenu */
+    content: '\25BC'; 
     position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-    pointer-events: none; /* Empêche la flèche d'être sélectionnée */
   }
   
